@@ -12,6 +12,7 @@
 4) hdfs dfs -cat /new_folder/task | head -n 5
 5) hdfs dfs -cp /new_folder/task /
 
+
 2) hdfs dfs -setrep 2 /task
 Изменение фактора репликации по времени занимает не много времени, если файл не очень большой. Т.е от файла зависит.
 3) hdfs fsck /task -files -blocks -locations
