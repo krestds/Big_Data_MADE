@@ -1,1 +1,17 @@
+1) hdfs dfs -mkdir /new_folder
+2) hdfs dfs -mkdir /new_folder/new_folder
+3) Trash это место куда поступают файлы, и через время они удаляются оттуда. Если хотим удалить сразу, то добавляем -skipTrash.
+4) hdfs dfs -touchz /new_folder/new_folder/empty_file
+5) hdfs dfs -rm /new_folder/new_folder/empty_file
+6) hdfs dfs -rm -R /new_folde
 
+
+1) hdfs dfs -put task /new_folder/
+2) hdfs dfs -cat /new_folder/task
+3) hdfs dfs -cat /new_folder/task | tail -n 5
+4) hdfs dfs -cat /new_folder/task | head -n 5
+5) hdfs dfs -cp /new_folder/task /
+
+2) hdfs dfs -setrep 2 /task
+Изменение фактора репликации по времени занимает не много времени, если файл не очень большой. Т.е от файла зависит.
+3) hdfs fsck /task -files -blocks -locations
